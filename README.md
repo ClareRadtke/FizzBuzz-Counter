@@ -35,8 +35,8 @@ In your terminal type:
 
 - [ ] Landing page:
 
-  - [ ] Two buttons - increment and decrement
-  - [ ] Text field
+  - [x] Two buttons - increment and decrement
+  - [x] Text field
   - [ ] Buttons respectively increment and decrement a counter
   - [ ] Buttons execute the logic of checking the counter
   - [ ] Result of the above logic will be written to the text field
