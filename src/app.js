@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.css";
 
 function App() {
-  let count = 0;
+  const [count, setCount] = useState(0);
+
+  function incrementCount() {
+    if (count > 100) {
+      setCount(count);
+      alert("Count cannot exceed 100");
+    } else {
+      setCount((prevCount) => prevCount + 1);
+    }
+  }
+  function decrementCount() {
+    if (count <= 0) {
+      setCount(count);
+      alert("Count cannot go below zero");
+    } else {
+      setCount((prevCount) => prevCount - 1);
+    }
+  }
+
   return (
     <div className={styles.main}>
       <div className={styles.buttonContainer}>
@@ -10,12 +28,7 @@ function App() {
           id="increment"
           className={styles.button}
           type="button"
-          onClick={(event) => {
-            console.log(count++);
-            if (count > 100) {
-              alert("Count cannot exceed 100");
-            }
-          }}
+          onClick={incrementCount}
         >
           +
         </button>
@@ -23,12 +36,7 @@ function App() {
           id="decrement"
           className={styles.button}
           type="button"
-          onClick={(event) => {
-            console.log(count--);
-            if (count < 0) {
-              alert("Count cannot go below zero");
-            }
-          }}
+          onClick={decrementCount}
         >
           -
         </button>
