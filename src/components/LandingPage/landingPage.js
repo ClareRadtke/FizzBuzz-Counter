@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./landingPage.modules.css";
 
-function fizzBuzz(count) {
+export function fizzBuzz(count) {
   if (count === 0) {
     return count;
   } else if (count % 3 === 0 && count % 5 === 0) {
@@ -15,8 +15,8 @@ function fizzBuzz(count) {
   }
 }
 
-function LandingPage() {
-  const [count, setCount] = useState(0);
+export function LandingPage({ startCount }) {
+  const [count, setCount] = useState(startCount ?? 0);
 
   function incrementCount() {
     if (count > 100) {
@@ -72,5 +72,3 @@ function LandingPage() {
     </>
   );
 }
-
-export default LandingPage;

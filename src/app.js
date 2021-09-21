@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./styles.module.css";
 
-import LandingPage from "./components/LandingPage/landingPage";
+import { LandingPage } from "./components/LandingPage/landingPage";
 
 function App() {
   return (
