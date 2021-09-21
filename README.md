@@ -43,6 +43,6 @@ In your terminal type:
   - [ ] Buttons execute the logic of checking the counter
   - [ ] Result of the above logic will be written to the text field
   - [ ] Validation to prevent the count from exceeding 100 or below 0
-  - [ ] User notification of the above validation
+  - [x] User notification of the above validation
 
 ![Provided example of button styling](./public/button-example.png)

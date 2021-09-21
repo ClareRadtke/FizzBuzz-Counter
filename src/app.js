@@ -12,6 +12,9 @@ function App() {
           type="button"
           onClick={(event) => {
             console.log(count++);
+            if (count > 100) {
+              alert("Count cannot exceed 100");
+            }
           }}
         >
           +
@@ -22,6 +25,9 @@ function App() {
           type="button"
           onClick={(event) => {
             console.log(count--);
+            if (count < 0) {
+              alert("Count cannot go below zero");
+            }
           }}
         >
           -
