@@ -37,6 +37,12 @@ function App() {
 
   return (
     <div className={styles.main}>
+      {/* <div>
+        <p>
+          Click the buttons below to increase and decrease the count and find
+          the instances of Fizz, Buzz and FizzBuzz. Can you find the pattern?
+        </p>
+      </div> */}
       <div className={styles.buttonContainer}>
         <button
           id="increment"
@@ -58,7 +64,7 @@ function App() {
       <div className={styles.textContainer}>
         <p id="text-output" className={styles.text}>
           count:
-          <span id="count" className={styles.text}>
+          <span id="count" className={`${styles.text} ${styles.counter}`}>
             {fizzBuzz(count)}
           </span>
         </p>

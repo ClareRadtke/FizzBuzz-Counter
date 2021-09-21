@@ -40,7 +40,7 @@ In your terminal type:
   - [x] Button styling to match example provided below
   - [x] Buttons to be cyan when active
   - [x] Buttons respectively increment and decrement a counter
-  - [ ] Buttons execute the logic of checking the counter
+  - [x] Buttons execute the logic of checking the counter
   - [x] Result of the above logic will be written to the text field
   - [x] Validation to prevent the count from exceeding 100 or below 0
   - [x] User notification of the above validation
