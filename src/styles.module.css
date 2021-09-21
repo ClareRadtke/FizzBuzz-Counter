@@ -34,15 +34,18 @@
 .button:active {
   background-color: cyan;
 }
+.textContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
 .text {
-  width: 100%;
-  font-weight: bold;
   color: mistyrose;
   font-size: calc(1.3em + 0.5vw);
   display: flex;
-  justify-content: center;
-  align-self: center;
+  align-items: center;
   border: none;
   padding: 0.5rem 1rem;
 }
