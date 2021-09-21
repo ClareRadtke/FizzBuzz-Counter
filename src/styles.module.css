@@ -4,10 +4,8 @@
   justify-content: center;
   flex-flow: row nowrap;
   height: calc(100vh - 16px);
-  background-color: #e7ebe7;
+  background-color: #f1f6f1;
 }
-
-/* app.js styling */
 
 .main {
   display: flex;
@@ -15,54 +13,4 @@
   justify-content: center;
   align-items: center;
   width: 50vw;
-  /* background-color: darkcyan; */
-}
-
-.buttonContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.button {
-  /* display: flex; */
-  border: 0.5rem;
-  padding: 0.5rem 0;
-  width: calc(50% - 0.5em);
-  border-radius: 0.25rem;
-  margin: 0 0.25em;
-  background: grey;
-  color: white;
-  cursor: pointer;
-  filter: drop-shadow(3px 3px 1px rgb(149, 148, 148));
-  align-self: center;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  font-size: calc(2em + 1vw);
-  text-align: center;
-}
-
-.button:active {
-  background-color: cyan;
-  color: black;
-}
-.textContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.text {
-  color: black;
-  font-size: calc(1.5em + 1vw);
-  display: flex;
-  align-items: center;
-  border: none;
-  padding: 0.5rem 1rem;
-}
-
-.counter {
-  font-size: calc(1em + 1vw);
 }
