@@ -21,6 +21,20 @@ function App() {
     }
   }
 
+  function fizzBuzz(count) {
+    if (count === 0) {
+      return count;
+    } else if (count % 3 === 0 && count % 5 === 0) {
+      return "FizzBuzz";
+    } else if (count % 5 === 0) {
+      return "Buzz";
+    } else if (count % 3 === 0) {
+      return "Fizz";
+    } else {
+      return count;
+    }
+  }
+
   return (
     <div className={styles.main}>
       <div className={styles.buttonContainer}>
@@ -45,7 +59,7 @@ function App() {
         <p id="text-output" className={styles.text}>
           count:
           <span id="count" className={styles.text}>
-            {count}
+            {fizzBuzz(count)}
           </span>
         </p>
       </div>
