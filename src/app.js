@@ -5,10 +5,10 @@ function App() {
   return (
     <div className={styles.main}>
       <div className={styles.buttonContainer}>
-        <button id="increment" className={styles.button}>
+        <button id="increment" className={styles.button} type="button">
           +
         </button>
-        <button id="decrement" className={styles.button}>
+        <button id="decrement" className={styles.button} type="button">
           -
         </button>
       </div>

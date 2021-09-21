@@ -37,8 +37,12 @@ In your terminal type:
 
   - [x] Two buttons - increment and decrement
   - [x] Text field
+  - [x] Button styling to match example provided
+  - [x] Buttons to be cyan when active
   - [ ] Buttons respectively increment and decrement a counter
   - [ ] Buttons execute the logic of checking the counter
   - [ ] Result of the above logic will be written to the text field
   - [ ] Validation to prevent the count from exceeding 100 or below 0
   - [ ] User notification of the above validation
+
+![Provided example of button styling](./public/button-example.png)
