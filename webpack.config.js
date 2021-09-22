@@ -6,6 +6,8 @@ module.exports = {
   entry: "./src/index.js",
   devServer: {
     static: "./dist",
+    port: 8080,
+    proxy: { "/api/**": { target: "http://localhost:3001", secure: false } },
   },
   plugins: [
     new HtmlWebpackPlugin({

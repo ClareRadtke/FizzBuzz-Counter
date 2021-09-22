@@ -28,5 +28,11 @@
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.1",
+    "sequelize": "^6.6.5",
+    "sqlite3": "^5.0.2"
+  }
+  
 }
