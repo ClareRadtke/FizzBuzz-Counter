@@ -6,6 +6,7 @@ import { LoginPage } from "./components/LoginPage/loginPage";
 
 function App() {
   const [data, setData] = React.useState(null);
+  const [ActivePage, setActivePage] = React.useState("LoginPage");
 
   React.useEffect(() => {
     fetch("/api/test")
@@ -14,7 +15,13 @@ function App() {
   }, []);
   return (
     <div className={styles.main}>
-      <LoginPage />
+      {ActivePage === "FizzBuzz" ? (
+        <LandingPage />
+      ) : (
+        <LoginPage setActivePage={setActivePage} />
+      )}
+      {/* <ActivePage /> */}
+      {/* <LoginPage setActivePage={setActivePage} /> */}
       {/* <p>{!data ? "Loading..." : data}</p> */}
       {/* <LandingPage /> */}
     </div>

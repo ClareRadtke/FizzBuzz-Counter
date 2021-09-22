@@ -1,12 +1,23 @@
 import React, { useState } from "react";
 import styles from "./loginPage.module.css";
 
-export function LoginPage() {
-  React.useEffect(() => {
-    fetch("/api/login")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
+function handleLogin(username, password, setActivePage) {
+  fetch("/api/login", {
+    method: "POST",
+    body: JSON.stringify({ username, password }),
+    headers: { "Content-Type": "application/json" },
+  }).then((res) => {
+    if (res.ok) {
+      setActivePage("FizzBuzz");
+    } else {
+      alert("Incorrect username or password, please try again");
+    }
+  });
+}
+
+export function LoginPage(props) {
+  const [username, updateUsername] = useState("");
+  const [password, updatePassword] = useState("");
 
   return (
     <>
@@ -20,8 +31,10 @@ export function LoginPage() {
             Username:
           </label>
           <input
-            onChange={(event) => {}}
-            // value="email"
+            onChange={(event) => {
+              updateUsername(event.currentTarget.value);
+            }}
+            value={username}
             id="username"
             name="username"
             required
@@ -35,8 +48,10 @@ export function LoginPage() {
             Password:
           </label>
           <input
-            onChange={(event) => {}}
-            // value="password"
+            onChange={(event) => {
+              updatePassword(event.currentTarget.value);
+            }}
+            value={password}
             type="password"
             id="password"
             name="password"
@@ -52,7 +67,9 @@ export function LoginPage() {
             value="login"
             id="login"
             className={`${styles.button} ${styles.login}`}
-            onClick={(event) => {}}
+            onClick={(event) => {
+              handleLogin(username, password, props.setActivePage);
+            }}
           >
             Login
           </button>
