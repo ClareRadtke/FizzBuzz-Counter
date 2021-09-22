@@ -37,12 +37,6 @@ export function LandingPage({ startCount }) {
 
   return (
     <>
-      {/* <div>
-        <p>
-          Click the buttons below to increase and decrease the count and find
-          the instances of Fizz, Buzz and FizzBuzz. Can you find the pattern?
-        </p>
-      </div> */}
       <div className={styles.buttonContainer}>
         <button
           id="increment"

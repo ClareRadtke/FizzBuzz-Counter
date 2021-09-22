@@ -24,16 +24,6 @@ app.use(
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use((req, res, next) => {
-  console.log("incoming req:", req.url);
-  res.locals.loggedIn = req.session.logged_in;
-  res.locals.userId = req.session.userId;
-  res.locals.url = req.url;
-  next();
-});
-// app.get("/api/test", (req, res) => {
-//   res.json({ message: "Hello from server!" });
-// });
 
 // Login route
 app.post("/api/login", async (req, res) => {

@@ -20,10 +20,6 @@ function App() {
       ) : (
         <LoginPage setActivePage={setActivePage} />
       )}
-      {/* <ActivePage /> */}
-      {/* <LoginPage setActivePage={setActivePage} /> */}
-      {/* <p>{!data ? "Loading..." : data}</p> */}
-      {/* <LandingPage /> */}
     </div>
   );
 }
