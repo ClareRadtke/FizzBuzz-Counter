@@ -9,18 +9,17 @@ export function LoginPage() {
           <h1 className={styles.heading}>Login</h1>
         </div>
 
-        <div className={styles.emailContainer}>
-          <label htmlFor="email" className={styles.label}>
-            Email:
+        <div className={styles.usernameContainer}>
+          <label htmlFor="username" className={styles.label}>
+            Username:
           </label>
           <input
             onChange={(event) => {}}
             // value="email"
-            id="email"
-            name="email"
+            id="username"
+            name="username"
             required
-            type="email"
-            pattern=".+@.+\..+"
+            type="text"
             className={styles.input}
           />
         </div>

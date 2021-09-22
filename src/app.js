@@ -14,8 +14,8 @@ function App() {
   }, []);
   return (
     <div className={styles.main}>
-      {/* <LoginPage /> */}
-      <p>{!data ? "Loading..." : data}</p>
+      <LoginPage />
+      {/* <p>{!data ? "Loading..." : data}</p> */}
       {/* <LandingPage /> */}
     </div>
   );
