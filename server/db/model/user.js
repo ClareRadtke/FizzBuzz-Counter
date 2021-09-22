@@ -32,7 +32,6 @@ User.init(
   {
     hooks: {
       beforeCreate: hashPasswordHook,
-      beforeUpdate: hashPasswordHook,
     },
     sequelize,
     timestamps: false,

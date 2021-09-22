@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import styles from "./loginPage.module.css";
 
 export function LoginPage() {
+  React.useEffect(() => {
+    fetch("/api/login")
+      .then((res) => res.json())
+      .then((data) => setData(data.message));
+  }, []);
+
   return (
     <>
       <form autoComplete="off" className={styles.loginForm}>
