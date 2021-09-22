@@ -14,6 +14,12 @@ In your terminal type:
 - `npm run build` to build the app for production
 <!-- - `npm run start:server` to run the production build of the app -->
 
+## Testing
+
+In your terminal type:
+
+- `npm run test` to run all tests
+
 ## Prerequisites
 
 - Node
@@ -23,7 +29,7 @@ In your terminal type:
 
 - [x] Node.js web application:
   - [x] Can be built using webpack or any other build tools as desired
-  - [ ] Is supported and setup to use a testing framework
+  - [x] Is supported and setup to use a testing framework
 - [x] All code committed to GitHub (small progressive commits)
 - [ ] Logic supported through use of unit tests
 - [x] CSS used for styling

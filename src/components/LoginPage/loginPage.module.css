@@ -1,0 +1,83 @@
+.loginForm {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: calc(100% - 2em);
+  height: fit-content;
+  padding: 1em;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.heading {
+  font-size: calc(2em + 0.5vw);
+  color: #0c0d12;
+}
+
+.emailContainer,
+.passwordContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  width: calc(100% - 2em);
+  margin: 0.5em 0;
+}
+
+.label {
+  font-weight: 400;
+  margin-right: 0.5em;
+  font-size: calc(1.3em + 0.5vw);
+  color: #0c0d12;
+}
+.input {
+  line-height: 1.5;
+  font-size: calc(1em + 0.5vw);
+  background-color: #f1f6f1;
+  border: 2px solid #0c0d12;
+  width: 95%;
+}
+
+.buttonContainer {
+  margin: 1em 1em 2em;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  font-size: calc(1.3em + 0.5vw);
+  font-weight: bold;
+  display: flex;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  margin: 0.5rem 2em 1em;
+  background: #f1f6f1;
+  color: #0c0d12;
+  cursor: pointer;
+  text-align: center;
+  align-self: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  line-height: 1;
+  text-decoration: none;
+  list-style: none;
+}
+.button.login {
+  background: #096b72;
+  color: #f1f6f1;
+  border: 3px solid #096b72;
+  margin: 0.9em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.button.cancel {
+  background: #f1f6f1;
+  color: red;
+  border: 3px solid red;
+  margin: 0.9em;
+}

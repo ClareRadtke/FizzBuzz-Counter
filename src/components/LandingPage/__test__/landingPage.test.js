@@ -72,9 +72,8 @@ describe("LandingPage", () => {
     fireEvent.click(decrementBtn);
 
     expect(countOutput.textContent).toBe("0");
-
-    fireEvent.click(decrementBtn);
     expect(count.textContent).not.toBe("-1");
+
     // TODO: add test for alert
   });
   test("Count does not exceed 100", () => {
@@ -85,9 +84,8 @@ describe("LandingPage", () => {
     fireEvent.click(incrementBtn);
 
     expect(countOutput.textContent).toBe("Buzz");
-
-    fireEvent.click(incrementBtn);
     expect(count.textContent).not.toBe("101");
+
     // TODO: add test for alert
   });
   test("Multiples of 3 return Fizz", () => {
