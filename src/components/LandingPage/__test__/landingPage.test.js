@@ -6,6 +6,7 @@ import React from "react";
 import { expect, test } from "@jest/globals";
 import { render, fireEvent } from "@testing-library/react";
 import { LandingPage, fizzBuzz } from "../landingPage";
+import { count } from "console";
 
 // test("", () => {
 //   expect().toBe();
@@ -63,15 +64,60 @@ describe("LandingPage", () => {
 
     expect(countOutput.textContent).toBe("1");
   });
-  // test("Count does not go below zero", () => {
-  //   // expect().toBe();
-  // });
-  // test("Count does not exceed 100", () => {
-  //   // expect().toBe();
-  // });
-  // test("Multiples of 3, 5 and 3 and 5 return Fizz, Buzz and FIzzBuzz respectively", () => {
-  //   // expect().toBe("Fizz");
-  //   // expect().toBe("Buzz");
-  //   // expect().toBe("FizzBuzz");
-  // });
+  test("Count does not go below zero", () => {
+    const result = render(<LandingPage startCount={1} />);
+    const decrementBtn = result.container.querySelector("#decrement");
+    const countOutput = result.container.querySelector("#count");
+
+    fireEvent.click(decrementBtn);
+
+    expect(countOutput.textContent).toBe("0");
+
+    fireEvent.click(decrementBtn);
+    expect(count.textContent).not.toBe("-1");
+    // TODO: add test for alert
+  });
+  test("Count does not exceed 100", () => {
+    const result = render(<LandingPage startCount={99} />);
+    const incrementBtn = result.container.querySelector("#increment");
+    const countOutput = result.container.querySelector("#count");
+
+    fireEvent.click(incrementBtn);
+
+    expect(countOutput.textContent).toBe("Buzz");
+
+    fireEvent.click(incrementBtn);
+    expect(count.textContent).not.toBe("101");
+    // TODO: add test for alert
+  });
+  test("Multiples of 3 return Fizz", () => {
+    const result = render(<LandingPage startCount={2} />);
+    const incrementBtn = result.container.querySelector("#increment");
+    const countOutput = result.container.querySelector("#count");
+
+    fireEvent.click(incrementBtn);
+
+    expect(countOutput.textContent).toBe("Fizz");
+    expect(count.textContent).not.toBe("3");
+  });
+  test("Multiples of 5 Buzz", () => {
+    const result = render(<LandingPage startCount={4} />);
+    const incrementBtn = result.container.querySelector("#increment");
+    const countOutput = result.container.querySelector("#count");
+
+    fireEvent.click(incrementBtn);
+
+    expect(countOutput.textContent).toBe("Buzz");
+    expect(count.textContent).not.toBe("5");
+  });
+  test("Multiples of 3 and 5 return FizzBuzz", () => {
+    const result = render(<LandingPage startCount={14} />);
+    const incrementBtn = result.container.querySelector("#increment");
+    const countOutput = result.container.querySelector("#count");
+
+    fireEvent.click(incrementBtn);
+
+    expect(countOutput.textContent).toBe("FizzBuzz");
+    expect(count.textContent).not.toBe("15");
+  });
 });
